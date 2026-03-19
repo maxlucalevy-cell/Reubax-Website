@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -51,7 +52,14 @@ export function SiteHeader() {
             </div>
             <div>
               <div className="text-sm font-semibold tracking-[0.28em] text-slate-950">
-                REUBAX
+                <Link href="/" className="flex items-center">
+  <Image
+    src="/logo.png"
+    alt="Reubax logo"
+    width={140}
+    height={40}
+  />
+</Link>
               </div>
               <div className="text-xs text-slate-500">AI Partner Intermediary</div>
             </div>
