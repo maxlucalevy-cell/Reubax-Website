@@ -81,6 +81,13 @@ export default function RootLayout({
         <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-na3.hs-scripts.com/343080062.js"></script>
 <!-- End of HubSpot Embed Code -->
+<script
+    type="text/javascript"
+    id="hs-script-loader"
+    async
+    defer
+    src="//js.hs-scripts.com/343080062.js"
+  ></script> 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
