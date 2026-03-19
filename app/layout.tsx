@@ -78,6 +78,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen font-[family:var(--font-sans)]">
+        <!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-na3.hs-scripts.com/343080062.js"></script>
+<!-- End of HubSpot Embed Code -->
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
