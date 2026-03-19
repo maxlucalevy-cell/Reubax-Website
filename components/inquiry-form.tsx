@@ -90,9 +90,3 @@ export function InquiryForm({
     rel="noopener noreferrer"
     className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-white hover:bg-slate-800 transition"
   >
-    {isBusiness
-      ? "Get matched with an AI partner"
-      : "Apply to join the REUBAX network"}
-  </a>
-  );
-}
