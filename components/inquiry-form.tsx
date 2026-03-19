@@ -94,18 +94,5 @@ export function InquiryForm({
       ? "Get matched with an AI partner"
       : "Apply to join the REUBAX network"}
   </a>
-</div> 
-    <Card className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_12px_32px_rgba(15,23,42,0.05)] md:p-10">
-      <div className="max-w-2xl">
-        <p className="card-kicker">Inquiry form</p>
-        <h3 className="text-2xl font-semibold text-slate-950">{title}</h3>
-        <p className="mt-3 leading-7 text-slate-950">{description}</p>
-        <p className="mt-3 max-w-xl text-sm leading-6 text-slate-500">{helperText}</p>
-      </div>
-
-      <div className="mt-8">
-        <div id="hubspot-form"></div>
-      </div>
-    </Card>
   );
 }
