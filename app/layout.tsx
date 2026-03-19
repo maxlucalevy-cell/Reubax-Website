@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Manrope, Fraunces } from "next/font/google";
 import type { ReactNode } from "react";
@@ -77,16 +78,10 @@ export default function RootLayout({
       className={`${manrope.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen font-[family:var(--font-sans)]">
-        <!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-na3.hs-scripts.com/343080062.js"></script>
-<!-- End of HubSpot Embed Code -->
-<script
-    type="text/javascript"
-    id="hs-script-loader"
-    async
-    defer
-    src="//js.hs-scripts.com/343080062.js"
+<Script
+  src="//js.hs-scripts.com/34308062.js"
+  strategy="afterInteractive"
+/>
   ></script> 
         <script
           type="application/ld+json"
