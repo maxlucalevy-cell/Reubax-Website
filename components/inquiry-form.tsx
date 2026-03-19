@@ -1,9 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import Script from "next/script";
 
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 type InquiryFormProps = {
@@ -31,161 +28,57 @@ export function InquiryForm({
         <p className="mt-3 leading-7">{description}</p>
         <p className="mt-3 max-w-xl text-sm leading-6 text-slate-500">{helperText}</p>
       </div>
-      <form
-        className="mt-8 grid gap-6"
-        data-hubspot-form={audience}
-        data-lead-path={audience}
-      >
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="grid gap-2">
-            <Label htmlFor={`${audience}-name`}>Full name</Label>
-            <Input
-              id={`${audience}-name`}
-              name="full_name"
-              placeholder="Jane Smith"
-            />
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor={`${audience}-company`}>Company</Label>
-            <Input
-              id={`${audience}-company`}
-              name="company"
-              placeholder={isBusiness ? "Acme Corp" : "Northstar AI Consulting"}
-            />
-          </div>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="grid gap-2">
-            <Label htmlFor={`${audience}-email`}>Work email</Label>
-            <Input
-              id={`${audience}-email`}
-              name="work_email"
-              type="email"
-              placeholder="jane@company.com"
-            />
-          </div>
-          {isBusiness ? (
-            <div className="grid gap-2">
-              <Label htmlFor={`${audience}-company-size`}>Company size</Label>
-              <Input
-                id={`${audience}-company-size`}
-                name="company_size"
-                placeholder="201-500 employees"
-              />
-            </div>
-          ) : (
-            <div className="grid gap-2">
-              <Label htmlFor={`${audience}-website`}>Website</Label>
-              <Input
-                id={`${audience}-website`}
-                name="website"
-                type="url"
-                placeholder="https://www.example.com"
-              />
-            </div>
-          )}
-        </div>
-
+      <div className="mt-8">
         {isBusiness ? (
           <>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="grid gap-2">
-                <Label htmlFor={`${audience}-industry`}>Industry</Label>
-                <Input
-                  id={`${audience}-industry`}
-                  name="industry"
-                  placeholder="Financial services"
-                />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor={`${audience}-budget`}>Estimated budget</Label>
-                <Input
-                  id={`${audience}-budget`}
-                  name="estimated_budget"
-                  placeholder="$50k-$150k"
-                />
-              </div>
-            </div>
+            <div id="hubspot-business-form"></div>
 
-            <div className="grid gap-2">
-              <Label htmlFor={`${audience}-goal`}>
-                What are you looking to solve with AI?
-              </Label>
-              <Textarea
-                id={`${audience}-goal`}
-                name="ai_goal"
-                placeholder="Describe the business problem, the initiative under consideration, and the type of outcome you want to achieve."
-              />
-            </div>
+            <Script
+              src="https://js-na3.hsforms.net/forms/embed/343080062.js"
+              strategy="afterInteractive"
+            />
+
+            <Script id="hubspot-business-form-script" strategy="afterInteractive">
+              {`
+                window.addEventListener("load", function () {
+                  if (window.hbspt) {
+                    window.hbspt.forms.create({
+                      region: "na3",
+                      portalId: "343080062",
+                      formId: "ef4092b1-9b8e-4095-bd71-95062d000b31",
+                      target: "#hubspot-business-form"
+                    });
+                  }
+                });
+              `}
+            </Script>
           </>
         ) : (
           <>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="grid gap-2">
-                <Label htmlFor={`${audience}-team-size`}>Team size</Label>
-                <Input
-                  id={`${audience}-team-size`}
-                  name="team_size"
-                  placeholder="25 consultants"
-                />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor={`${audience}-industries`}>Industries served</Label>
-                <Input
-                  id={`${audience}-industries`}
-                  name="industries_served"
-                  placeholder="Healthcare, logistics, manufacturing"
-                />
-              </div>
-            </div>
+            <div id="hubspot-partner-form"></div>
 
-            <div className="grid gap-2">
-              <Label htmlFor={`${audience}-services`}>Core AI services</Label>
-              <Textarea
-                id={`${audience}-services`}
-                name="core_ai_services"
-                placeholder="Describe your core services, delivery strengths, and the types of engagements you lead."
-              />
-            </div>
+            <Script
+              src="https://js-na3.hsforms.net/forms/embed/343080062.js"
+              strategy="afterInteractive"
+            />
 
-            <div className="grid gap-2">
-              <Label htmlFor={`${audience}-projects`}>
-                Example projects / case studies
-              </Label>
-              <Textarea
-                id={`${audience}-projects`}
-                name="example_projects_case_studies"
-                placeholder="Share representative projects, client examples, or case studies that reflect your work."
-              />
-            </div>
+            <Script id="hubspot-partner-form-script" strategy="afterInteractive">
+              {`
+                window.addEventListener("load", function () {
+                  if (window.hbspt) {
+                    window.hbspt.forms.create({
+                      region: "na3",
+                      portalId: "343080062",
+                      formId: "bbb69182-04c5-4481-ab72-7455f559ec41",
+                      target: "#hubspot-partner-form"
+                    });
+                  }
+                });
+              `}
+            </Script>
           </>
         )}
-
-        <div className="grid gap-2">
-          <Label htmlFor={`${audience}-notes`}>Additional context</Label>
-          <Textarea
-            id={`${audience}-notes`}
-            name="additional_context"
-            placeholder={
-              isBusiness
-                ? "Budget context, stakeholders, timing, existing systems, or constraints."
-                : "Anything else relevant to your firm, positioning, delivery model, or ideal client profile."
-            }
-          />
-        </div>
-
-        <div className="flex flex-col gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm leading-6 text-slate-500">
-            Field names are structured for straightforward mapping into HubSpot
-            properties or form handlers.
-          </p>
-          <Button type="submit">
-            {submitLabel}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
-      </form>
+      </div>
     </Card>
   );
 }
