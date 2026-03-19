@@ -34,6 +34,9 @@ const organizationSchema = {
   ],
 };
 export const metadata = {
+  icons: {
+  icon: "/icon.png",
+},
   title: "REUBAX | AI Implementation Partner Network",
   description: "We connect companies with vetted AI consulting partners.",
   keywords: [
