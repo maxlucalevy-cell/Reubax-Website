@@ -53,3 +53,9 @@ export function SiteFooter() {
     </footer>
   );
 }
+<div style={{ marginTop: "20px", fontSize: "14px" }}>
+  <p>
+    Email: <a href="mailto:maxlevy@reubax.ca">maxlevy@reubax.ca</a>
+  </p>
+  <p>Montreal, Canada</p>
+</div>
