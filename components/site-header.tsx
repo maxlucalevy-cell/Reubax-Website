@@ -52,12 +52,12 @@ export function SiteHeader() {
             </div>
             <div>
               <div className="text-sm font-semibold tracking-[0.28em] text-slate-950">
-                <Link href="/" className="flex items-center">
+<Link href="/" className="flex items-center">
   <Image
     src="/logo.png"
     alt="Reubax logo"
-    width={100}
-    height={20}
+    width={140}
+    height={40}
   />
 </Link>
               </div>
