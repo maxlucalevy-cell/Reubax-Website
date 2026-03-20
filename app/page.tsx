@@ -308,7 +308,6 @@ export default function HomePage() {
     title: "Connect",
     description: "We introduce you and get things moving.",
   },
-]
           ].map((item, index) => (
             <MotionSection key={item.step} delay={index * 0.08}>
               <Card className="grid-card h-full">
