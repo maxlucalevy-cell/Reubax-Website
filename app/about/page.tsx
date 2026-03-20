@@ -39,7 +39,7 @@ export default function AboutPage() {
           </MotionSection>
           <MotionSection delay={0.08}>
             <Card className="dark-panel h-full p-8 md:p-10">
-              <span className="text-sm uppercase tracking-[0.22em] text-cyan-200">
+              <span className="text-sm uppercase tracking-[0.22em] text-slate-700">
                 Business Model
               </span>
               <p className="mt-6 text-2xl leading-9 text-slate-100">
