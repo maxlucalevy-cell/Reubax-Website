@@ -39,14 +39,14 @@ export default function AboutPage() {
           </MotionSection>
           <MotionSection delay={0.08}>
             <Card className="dark-panel h-full p-8 md:p-10">
-              <span className="text-sm uppercase tracking-[0.22em] text-slate-700">
+              <span className="text-sm uppercase tracking-[0.22em] text-cyan-900">
                 Business Model
               </span>
-              <p className="mt-6 text-2xl leading-9 text-slate-100">
+              <p className="mt-6 text-2xl leading-9 text-slate-700">
                 REUBAX earns referral fees when a consulting partner is selected
                 for a client project.
               </p>
-              <p className="mt-5 leading-7 text-slate-300">
+              <p className="mt-5 leading-7 text-slate-700">
                 The model is straightforward: assess the requirement, identify
                 suitable firms, and support introductions that may lead to an
                 engagement.
