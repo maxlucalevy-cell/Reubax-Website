@@ -292,9 +292,9 @@ export default function HomePage() {
   description="We understand, match, and connect."
 />
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-         [
-  {
-    step: "01",
+  {[
+    {
+      step: "01",
     title: "Understand",
     description: "We learn your goals and requirements.",
   },
