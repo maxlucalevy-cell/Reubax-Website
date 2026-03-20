@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { siteNavigation } from "@/lib/site";
+import { Button } from "@/components/ui/button";
 
 export function SiteFooter() {
   return (
