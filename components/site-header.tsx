@@ -116,12 +116,11 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-              <Button asChild size="lg" className="mt-3 w-full">
+              <Button size="xl" asChild>
   <a
-    href="https://outlook.office365.com/owa/calendar/REUBAXIntroCall@reubax.ca/bookings/"
+    href="https://outlook.office.com/book/REUBAXIntroCall@reubax.ca/"
     target="_blank"
     rel="noopener noreferrer"
-    onClick={() => setIsOpen(false)}
   >
     Book a conversation
   </a>
