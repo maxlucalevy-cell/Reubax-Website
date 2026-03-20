@@ -309,7 +309,6 @@ export default function HomePage() {
     title: "Connect",
     description: "We introduce you and get things moving.",
   },
-      <FAQSection /> 
           ].map((item, index) => (
             <MotionSection key={item.step} delay={index * 0.08}>
               <Card className="grid-card h-full">
@@ -330,6 +329,8 @@ export default function HomePage() {
           </Button>
         </div>
       </section>
+
+      <FAQSection />
 
       <section className="section-shell">
         <div className="grid gap-8 lg:grid-cols-2">
