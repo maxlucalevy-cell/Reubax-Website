@@ -17,8 +17,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="An intermediary between companies seeking AI implementation and firms equipped to deliver it."
-        description="REUBAX exists to make AI partner selection more structured, more credible, and easier to manage."
+        title="Connecting companies and AI implementation firms to maximize growth potential for all"
+        description="REUBAX exists to make AI partner selection more structured and easier to manage."
       />
 
       <section className="section-shell pt-8">
@@ -32,8 +32,8 @@ export default function AboutPage() {
               <p className="mt-5 max-w-2xl text-base leading-8">
                 We work between companies pursuing AI initiatives and
                 consulting firms capable of delivering them. Our role is to
-                reduce search friction, improve partner fit, and support better
-                initial conversations.
+                reduce mindless searching and support better
+                business decisions.
               </p>
             </Card>
           </MotionSection>
@@ -43,13 +43,11 @@ export default function AboutPage() {
                 Business Model
               </span>
               <p className="mt-6 text-2xl leading-9 text-slate-700">
-                REUBAX earns referral fees when a consulting partner is selected
-                for a client project.
+                REUBAX earns when the right partnership is made.
               </p>
               <p className="mt-5 leading-7 text-slate-700">
                 The model is straightforward: assess the requirement, identify
-                suitable firms, and support introductions that may lead to an
-                engagement.
+                suitable firms, and ease the sale process when an agreement is made
               </p>
             </Card>
           </MotionSection>
@@ -74,19 +72,19 @@ export default function AboutPage() {
               icon: Compass,
               title: "Clear role",
               description:
-                "REUBAX is not an implementation vendor. Its role is to connect the right parties.",
+                "REUBAX's role is to connect the right parties.",
             },
             {
               icon: Network,
               title: "Network quality",
               description:
-                "The value of the model depends on curation and partner relevance.",
+                "Our network is built on quality, specialization, and proven capability.",
             },
             {
               icon: Gem,
               title: "Professional standard",
               description:
-                "Communication and introductions should be concise, clear, and commercially grounded.",
+                "We pride ourselves on clear and concise communications and around the clock service",
             },
           ].map((item) => (
             <MotionSection key={item.title}>
@@ -103,8 +101,8 @@ export default function AboutPage() {
       <section className="section-shell">
         <SectionHeading
           eyebrow="Evidence"
-          title="Prepared for future references and case material."
-          description="As REUBAX grows, this section can hold client outcomes, partner references, and supporting proof without changing the structure of the site."
+          title="Trusted partner selection for AI initiatives."
+          description="We have supported businesses in finding the right AI partners for their most important initiatives from early exploration to active implementation."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {["Case studies", "Client testimonials", "Partner spotlights"].map(
