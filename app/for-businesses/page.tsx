@@ -18,7 +18,7 @@ export default function ForBusinessesPage() {
     <>
       <PageHero
         eyebrow="For Businesses"
-        title="A more disciplined way to identify the right AI implementation partner."
+        title="Identify the right AI implementation partner."
         description="REUBAX helps companies pursuing AI initiatives meet consulting firms with the right capability, specialization, and delivery profile."
       />
 
