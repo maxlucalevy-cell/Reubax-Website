@@ -78,11 +78,15 @@ export default function HowItWorksPage() {
           ))}
         </div>
         <div className="mt-10">
-          <Button asChild size="lg">
-            <a href="/contact">
-              Book a conversation <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+           <Button size="xl" asChild>
+  <a
+    href="https://outlook.office.com/book/REUBAXIntroCall@reubax.ca/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Book a conversation
+  </a>
+</Button>
         </div>
       </section>
     </>
