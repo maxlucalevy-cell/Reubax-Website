@@ -18,19 +18,19 @@ const process = [
     icon: ClipboardList,
     title: "Assess the requirement",
     description:
-      "We begin with the business context, the initiative under consideration, and the type of consulting support required.",
+      "We begin with the business context, the desired fix, and the type of support required.",
   },
   {
     icon: SearchCheck,
     title: "Identify suitable firms",
     description:
-      "We review our network and identify consulting firms whose capabilities and delivery approach align with the requirement.",
+      "We connect you with consulting firms whose capabilities align with your requirements.",
   },
   {
     icon: UsersRound,
     title: "Support the introduction",
     description:
-      "We facilitate introductions with enough context for both sides to enter the discussion well prepared.",
+      "We facilitate long lasting relationships and ensure both sides grow together.",
   },
 ];
 
