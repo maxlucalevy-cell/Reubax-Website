@@ -9,7 +9,6 @@ import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import Image from "next/image"
 
 const faqItems = [
   {
