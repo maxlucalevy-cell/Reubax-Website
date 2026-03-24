@@ -115,7 +115,7 @@ export function FAQSection() {
             <span className="inline-flex items-center rounded-full border border-slate-900 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-700">
               Still have questions?
             </span>
-            <h3 className="mt-6 max-w-sm text-[2rem] font-semibold leading-[1.05] text-white">
+            <h3 className="mt-6 max-w-sm text-[2rem] font-semibold leading-[1.05] text-black">
               Get a clear answer from the REUBAX team
             </h3>
             <p className="mt-4 max-w-md text-[1rem] leading-7 text-slate-700">
