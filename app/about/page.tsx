@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="Connecting companies and AI implementation firms to maximize growth potential for all"
+        title="Connecting companies and AI implementation firms"
         description="REUBAX exists to make AI partner selection more structured and easier to manage."
       />
 
