@@ -54,21 +54,20 @@ function ContactPageContent() {
 }, [type]);
 
 return (
-      <PageHero
-        eyebrow="Contact"
-        title="Start the conversation."
-        description="Whether you are seeking an AI implementation partner or applying to join the REUBAX network, choose the route that fits your role."
-      />
+  <>
+    <PageHero
+      eyebrow="Contact"
+      title="Start the conversation."
+      description="Whether you are seeking an AI implementation partner or applying to join the REUBAX network, choose the route that fits your role."
+    />
 
-      <section id="form-section" className="section-shell pt-8">
-        <MotionSection>
-          <Tabs
-  value={activeTab}
-  onValueChange={(value) => setActiveTab(value as "business" | "partner")}
-  className="mx-auto max-w-5xl"
->
-            <div className="grid gap-4 md:grid-cols-2">
-              <Card className="grid-card">
+    <section id="form-section" className="section-shell pt-8 scroll-mt-28">
+      <MotionSection>
+        <Tabs
+          value={activeTab}
+          onValueChange={(value) => setActiveTab(value as "business" | "partner")}
+          className="mx-auto max-w-5xl"
+        >
                 <div className="flex items-start gap-4">
                   <Building2 className="mt-1 h-5 w-5 text-cyan-700" />
                   <div>
