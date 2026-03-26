@@ -15,7 +15,7 @@ function ContactPageContent() {
 
   const [activeTab, setActiveTab] = useState<"business" | "partner">("business");
 
- useEffect(() => {
+useEffect(() => {
   if (type === "partner") {
     setActiveTab("partner");
   } else {
@@ -23,34 +23,18 @@ function ContactPageContent() {
   }
 
   if (type) {
-  const el = document.getElementById("form-section");
-  if (!el) return;
+    const timeout = setTimeout(() => {
+      const el = document.getElementById("form-section");
+      if (!el) return;
 
-  const targetPosition = el.offsetTop - 100;
-  const startPosition = window.scrollY;
-  const distance = targetPosition - startPosition;
-  const duration = 1400;
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 150);
 
-  let startTime: number | null = null;
-
-  function animation(currentTime: number) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-
-    const progress = Math.min(timeElapsed / duration, 1);
-
-    window.scrollTo(
-      0,
-      startPosition + distance * progress
-    );
-
-    if (timeElapsed < duration) {
-      requestAnimationFrame(animation);
-    }
+    return () => clearTimeout(timeout);
   }
-
-  requestAnimationFrame(animation);
-}
 }, [type]);
 
 return (
