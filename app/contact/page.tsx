@@ -48,8 +48,12 @@ if (type) {
       if (timeElapsed < duration) {
         requestAnimationFrame(animation);
       }
+      
     }
-
+ requestAnimationFrame(animation);
+  });
+}
+    
   return (
     <>
       <PageHero
