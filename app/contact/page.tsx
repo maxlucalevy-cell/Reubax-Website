@@ -21,12 +21,44 @@ function ContactPageContent() {
     } else {
       setActiveTab("business");
     }
-   setTimeout(() => {
-    const el = document.getElementById("form-section");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+if (type) {
+setTimeout(() => {
+  const el = document.getElementById("form-section");
+  if (!el) return;
+
+  const targetPosition = el.offsetTop - 100; // adjust offset if needed
+  const startPosition = window.scrollY;
+  const distance = targetPosition - startPosition;
+  const duration = 1200;
+  
+  let startTime: number | null = null;
+
+  function easeInOutQuad(t: number) {
+    return t < 0.5
+      ? 2 * t * t
+      : 1 - Math.pow(-2 * t + 2, 2) / 2;
+  }
+
+  function animation(currentTime: number) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+
+    const easedProgress = easeInOutQuad(progress);
+
+    window.scrollTo(
+      0,
+      startPosition + distance * easedProgress
+    );
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
     }
-  }, 100);
+  }
+
+  requestAnimationFrame(animation);
+}, 100);
+}
 }, [type]);
 
   return (
