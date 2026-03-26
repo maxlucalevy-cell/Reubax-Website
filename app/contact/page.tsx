@@ -51,10 +51,6 @@ if (type) {
       }
     }
 
-    requestAnimationFrame(animation);
-  });
-}
-
   return (
     <>
       <PageHero
