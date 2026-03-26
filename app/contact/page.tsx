@@ -7,9 +7,9 @@ import { MotionSection } from "@/components/motion-section";
 import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
-export default function ContactPage() {
+function ContactPageContent() {
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
       setActiveTab("business");
     }
   }, [type]);
-  
+
   return (
     <>
       <PageHero
@@ -90,5 +90,13 @@ export default function ContactPage() {
         </MotionSection>
       </section>
     </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="section-shell pt-8">Loading contact page...</div>}>
+      <ContactPageContent />
+    </Suspense>
   );
 }
