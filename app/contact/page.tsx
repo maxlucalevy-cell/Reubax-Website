@@ -1,11 +1,14 @@
-import { Building2, BriefcaseBusiness } from "lucide-react";
+"use client";
 
+import { Building2, BriefcaseBusiness } from "lucide-react";
 import type { Metadata } from "next";
+import { useSearchParams } from "next/navigation";
 import { InquiryForm } from "@/components/inquiry-form";
 import { MotionSection } from "@/components/motion-section";
 import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -14,6 +17,19 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type");
+
+  const [activeTab, setActiveTab] = useState<"business" | "partner">("business");
+
+  useEffect(() => {
+    if (type === "partner") {
+      setActiveTab("partner");
+    } else {
+      setActiveTab("business");
+    }
+  }, [type]);
+  
   return (
     <>
       <PageHero
@@ -24,7 +40,11 @@ export default function ContactPage() {
 
       <section className="section-shell pt-8">
         <MotionSection>
-          <Tabs defaultValue="business" className="mx-auto max-w-5xl">
+          <Tabs
+  value={activeTab}
+  onValueChange={(value) => setActiveTab(value as "business" | "partner")}
+  className="mx-auto max-w-5xl"
+>
             <div className="grid gap-4 md:grid-cols-2">
               <Card className="grid-card">
                 <div className="flex items-start gap-4">
