@@ -124,12 +124,6 @@ return (
   );
 }
 
-      </MotionSection>
-    </section>
-  </>
-  );
-}
-
 export default function ContactPage() {
   return (
     <Suspense fallback={<div className="section-shell pt-8">Loading contact page...</div>}>
