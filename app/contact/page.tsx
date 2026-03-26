@@ -21,7 +21,13 @@ function ContactPageContent() {
     } else {
       setActiveTab("business");
     }
-  }, [type]);
+   setTimeout(() => {
+    const el = document.getElementById("form-section");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 100);
+}, [type]);
 
   return (
     <>
@@ -31,7 +37,7 @@ function ContactPageContent() {
         description="Whether you are seeking an AI implementation partner or applying to join the REUBAX network, choose the route that fits your role."
       />
 
-      <section className="section-shell pt-8">
+      <section id="form-section" className="section-shell pt-8">
         <MotionSection>
           <Tabs
   value={activeTab}
