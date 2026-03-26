@@ -15,47 +15,45 @@ function ContactPageContent() {
 
   const [activeTab, setActiveTab] = useState<"business" | "partner">("business");
 
-  useEffect(() => {
-    if (type === "partner") {
-      setActiveTab("partner");
-    } else {
-      setActiveTab("business");
+ useEffect(() => {
+  if (type === "partner") {
+    setActiveTab("partner");
+  } else {
+    setActiveTab("business");
+  }
+
+  if (type) {
+  const el = document.getElementById("form-section");
+  if (!el) return;
+
+  const targetPosition = el.offsetTop - 100;
+  const startPosition = window.scrollY;
+  const distance = targetPosition - startPosition;
+  const duration = 1400;
+
+  let startTime: number | null = null;
+
+  function animation(currentTime: number) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+
+    const progress = Math.min(timeElapsed / duration, 1);
+
+    window.scrollTo(
+      0,
+      startPosition + distance * progress
+    );
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
     }
-    
-if (type) {
-  requestAnimationFrame(() => {
-    const el = document.getElementById("form-section");
-    if (!el) return;
+  }
 
-    const targetPosition = el.offsetTop - 100;
-    const startPosition = window.scrollY;
-    const distance = targetPosition - startPosition;
-    const duration = 1400; 
-
-    let startTime: number | null = null;
-
-    function animation(currentTime: number) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-
-      const progress = Math.min(timeElapsed / duration, 1);
-
-      window.scrollTo(
-        0,
-        startPosition + distance * progress
-      );
-
-      if (timeElapsed < duration) {
-        requestAnimationFrame(animation);
-      }
-      
-    }
- requestAnimationFrame(animation);
-  });
+  requestAnimationFrame(animation);
 }
-    
-  return (
-    <>
+}, [type]);
+
+return (
       <PageHero
         eyebrow="Contact"
         title="Start the conversation."
